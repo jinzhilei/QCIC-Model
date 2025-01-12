@@ -1,0 +1,33 @@
+function Q=TAS102_OS_Sim_CI(t,n)
+
+% n=95;
+% t=337;
+% TT=1:1:t;
+% T=TT./30;
+
+mu_min=0.5;
+mu_max=0.95;
+sigma_min=0.005;
+sigma_max=0.025;
+
+OS=zeros(t,1);
+Q=zeros(t,n);
+
+for j=1:1:n
+
+    mu=mu_min+rand(1)*(mu_max-mu_min);
+    sigma=sigma_min+rand(1)*(sigma_max-sigma_min);
+    Death=TAS102_OS_Sim(mu,sigma);
+
+    OS(1)=100;
+
+    for i=2:1:t
+        OS(i)=OS(i-1)-length(find(Death==i))*1;
+        if OS(i)<0
+           OS(i)=0;
+        end
+    end
+
+    Q(:,j)=OS;
+
+end
