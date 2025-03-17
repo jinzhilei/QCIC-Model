@@ -1,1 +1,16 @@
+This project includes the source codes for the quantitative cancer-immunity cycle (QCIC) model. 
+The QCIC model employs differential equations to capture the biological mechanisms underlying the cancer-immunity cycle and 
+predicts tumor evolution dynamics under various treatment strategies through stochastic computational methods. 
+A detailed description of the model should be referred to the following paper:
 
+Chenghang Li, Yongchang Wei, Jinzhi Lei, Quantitative cancer-immunity cycle modeling for predicting disease progression in advanced metastatic colorectal cancer. 
+
+The project file includes:
+
+（1）The document “QCIC model operation document.PDF” contains an explanation of the usage of the codes and the protocol for running the 
+program and plotting the figures. 
+
+（2）The folder "QCIC model basic operation code" includes MALTAB codes for model definition, virtual patient generation, 
+and simulation of the cancer-immunity cycle dynamics. This folder includes key codes for model simulation. 
+
+（3）The folders “Fig.2 ~ Fig.S10” include programs used for data processing and plotting for each of the Figures in the paper.
